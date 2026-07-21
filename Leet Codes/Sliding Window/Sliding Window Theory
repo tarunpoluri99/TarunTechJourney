@@ -1,0 +1,21 @@
+Step 1:Initialize currSum and maxSum to the sum of the initial k elements
+step2: Start the loop from the kth element
+step 3: Iterate until you reach the end
+step 4: Subtract the left element of the window
+step 5: Add the right element of the window
+Step 6: Update the max
+
+maxSum:
+
+currSum=winSum=sum(l[:k])
+for i in range(k,len(l)):
+    currSum+=l[i]-l[i-k] # Adding right element and removing left element
+    maxSum=max(currSum,maxSum)
+return maxSum
+
+ex:
+New Window Sum =
+Old Window Sum
++ New Element
+- Old Element
+
